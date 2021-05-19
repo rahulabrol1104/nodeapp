@@ -22,6 +22,5 @@ RUN npm run build
 #EXPOSE PORT
 EXPOSE 3000
 
-
 # Run the web service on container startup.
 CMD [ "npm", "start" ]

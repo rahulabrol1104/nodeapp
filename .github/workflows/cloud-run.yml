@@ -27,7 +27,7 @@ jobs:
         service_account_key: ${{ secrets.CLOUD_RUN_SERVICE_ACCOUNT }}
         service_account_email: ${{ secrets.CLOUD_RUN_SERVICE_ACCOUNT_EMAIL }}
 
-    - name: Enable the necessary APIs and enable docker auth
+    - name: Enable docker auth
       run: |-
         gcloud --quiet auth configure-docker
 

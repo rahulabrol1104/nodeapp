@@ -48,5 +48,4 @@ jobs:
           --platform managed \
           --region $CLOUD_RUN_REGION \
           --port=80 \
-          --ingress=internal-and-cloud-load-balancing \
           --quiet

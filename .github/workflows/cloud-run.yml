@@ -47,6 +47,5 @@ jobs:
           --project $CLOUD_RUN_PROJECT_ID \
           --platform managed \
           --region $CLOUD_RUN_REGION \
-          --port=80 \
           --ingress=internal-and-cloud-load-balancing \
           --quiet

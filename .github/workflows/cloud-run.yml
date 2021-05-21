@@ -25,7 +25,6 @@ jobs:
       with:
         project_id: ${{ secrets.CLOUD_RUN_PROJECT_ID }}
         service_account_key: ${{ secrets.CLOUD_RUN_SERVICE_ACCOUNT }}
-        service_account_email: ${{ secrets.CLOUD_RUN_SERVICE_ACCOUNT_EMAIL }}
 
     - name: Enable docker auth
       run: |-
@@ -48,5 +47,5 @@ jobs:
           --project $CLOUD_RUN_PROJECT_ID \
           --platform managed \
           --region $CLOUD_RUN_REGION \
-          --allow-unauthenticated \
+          --ingress=internal-and-cloud-load-balancing \
           --quiet

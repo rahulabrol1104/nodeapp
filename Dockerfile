@@ -20,7 +20,7 @@ RUN npm ci --only=production
 RUN npm run build
 
 #EXPOSE PORT
-EXPOSE 3000
+EXPOSE 80
 
 # Run the web service on container startup.
 CMD [ "npm", "start" ]

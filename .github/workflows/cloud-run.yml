@@ -8,7 +8,7 @@ on:
 
 env:
   CLOUD_RUN_PROJECT_ID: ${{ secrets.CLOUD_RUN_PROJECT_ID }}
-  CLOUD_RUN_REGION: us-central1-c
+  CLOUD_RUN_REGION: asia-south1
   REPO_NAME: nodeapp
 
 jobs:
@@ -47,5 +47,6 @@ jobs:
           --project $CLOUD_RUN_PROJECT_ID \
           --platform managed \
           --region $CLOUD_RUN_REGION \
+          --port=80 \
           --ingress=internal-and-cloud-load-balancing \
           --quiet
